@@ -1,6 +1,9 @@
 post_upgrade() {
   if usr/bin/pacman-key -l >/dev/null 2>&1; then
     usr/bin/pacman-key --populate ctlos
+  else
+    echo " >>> Run \`pacman-key --init\` to set up your pacman keyring."
+    echo " >>> Then run \`pacman-key --populate ctlos\` to install the Ctlos keyring."
   fi
 }
 
@@ -9,3 +12,4 @@ post_install() {
     post_upgrade
   fi
 }
+# -*- mode: bash;-*-
