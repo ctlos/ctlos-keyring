@@ -2,7 +2,7 @@
 
 pkgname=ctlos-keyring
 pkgver=$(date +%Y%m%d)
-pkgrel=3
+pkgrel=4
 pkgdesc='ctlos PGP keyring'
 arch=('any')
 url='https://github.com/ctlos/ctlos-keyring'
