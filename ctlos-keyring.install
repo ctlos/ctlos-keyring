@@ -1,13 +1,11 @@
-post_install() {
-  pacman-key --init
-  pacman-key --add /usr/share/pacman/keyrings/ctlos.gpg
-  pacman-key --lsign-key A24F76A41D635F7A
-  pacman-key --populate
+post_upgrade() {
+    if usr/bin/pacman-key -l >/dev/null 2>&1; then
+        usr/bin/pacman-key --populate ctlos
+    fi
 }
 
-post_upgrade() {
-  pacman-key --init
-  pacman-key --add /usr/share/pacman/keyrings/ctlos.gpg
-  pacman-key --lsign-key A24F76A41D635F7A
-  pacman-key --populate
+post_install() {
+    if [ -x usr/bin/pacman-key ]; then
+        post_upgrade
+    fi
 }
