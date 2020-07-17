@@ -1,10 +1,10 @@
 # Ctlos keyring gpg-key
 
 pkgname=ctlos-keyring
-pkgver=$(date +%Y%m%d)
-pkgrel=4
+pkgver=stable
+pkgrel=1
 pkgdesc='ctlos PGP keyring'
-arch=('any')
+arch=('x86_64')
 url='https://github.com/ctlos/ctlos-keyring'
 license=('GPL')
 install="${pkgname}.install"
