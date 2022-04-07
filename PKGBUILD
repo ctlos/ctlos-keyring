@@ -2,7 +2,7 @@
 
 pkgname=ctlos-keyring
 pkgver=stable
-pkgrel=1
+pkgrel=2
 pkgdesc='ctlos PGP keyring'
 arch=('x86_64')
 url='https://github.com/ctlos/ctlos-keyring'
